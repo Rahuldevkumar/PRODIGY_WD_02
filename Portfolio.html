@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | Web Developer</title>
+  <style>
+    /* === Global Styles === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2, h3 {
+      color: #222;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    /* === Navbar === */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    header h2 {
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    /* === Home Section === */
+    #home {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to right, #00bcd4, #2196f3);
+      color: white;
+      min-height: 100vh;
+      padding-top: 120px;
+    }
+
+    .home-content {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .home-content h1 {
+      font-size: 2.8rem;
+    }
+
+    .home-content p {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      max-width: 500px;
+    }
+
+    .home-photo {
+      flex: 1;
+      text-align: center;
+    }
+
+    .home-photo img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    /* === About Section === */
+    #about {
+      background: white;
+    }
+
+    #about h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-text p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .about-details {
+      margin-top: 15px;
+    }
+
+    .about-details li {
+      margin: 8px 0;
+      list-style: none;
+    }
+
+    /* === Projects Section === */
+    #projects {
+      background: #f0f8ff;
+    }
+
+    #projects h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* === Contact Section === */
+    #contact {
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    #contact h2 {
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+      #home {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .home-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .home-photo img {
+        width: 220px;
+        height: 220px;
+      }
+
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- === Header / Navbar === -->
+  <header>
+    <h2>MyPortfolio</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- === Home Section === -->
+  <section id="home">
+    <div class="home-content">
+      <h1>Hello, I'm <span style="color:#ffeb3b;">Rahul Dev Kumar</span></h1>
+      <h3>Front-End Web Developer</h3>
+      <p>I create modern, responsive, and visually appealing websites using HTML, CSS, and JavaScript. Passionate about crafting interactive experiences and solving problems through code.</p>
+    </div>
+    <div class="home-photo">
+     <img src="https://github.com/Rahuldevkumar/PRODIGY_WD_02/blob/main/Profile.jpg" alt="Profile Photo" />
+
+    </div>
+  </section>
+
+  <!-- === About Section === -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>I am a dedicated web developer with a passion for front-end technologies and creative design. My goal is to combine clean, efficient code with eye-catching interfaces that deliver smooth user experiences.</p>
+        <p>I have hands-on experience with HTML, CSS, JavaScript, and frameworks like React. I constantly explore new tools and technologies to stay up to date with modern web development trends.</p>
+        <ul class="about-details">
+          <li><strong>🎓 Education:</strong> B.Tech in Computer Science</li>
+          <li><strong>💼 Experience:</strong> 1+ year in front-end development</li>
+          <li><strong>🛠 Skills:</strong> HTML, CSS, JS, React, Git, Figma</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Projects Section === -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="https://github.com/Rahuldevkumar/PRODIGY_WD_02/blob/main/weather.png" alt="Project 1" />
+        <h3>Weather App</h3>
+        <p>A web app that fetches live weather data using OpenWeatherMap API and displays temperature, conditions, and more based on location.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="https://github.com/Rahuldevkumar/PRODIGY_WD_02/blob/main/Portfolio.png" alt="Project 2" />
+        <h3>Portfolio Website</h3>
+        <p>Responsive personal portfolio website built with HTML, CSS, and JavaScript to showcase skills and projects.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="https://github.com/Rahuldevkumar/PRODIGY_WD_02/blob/main/Sign.png" alt="Project 3" />
+        <h3>Sign Language Translator</h3>
+        <p>AI-based project using CNN and deep learning to translate real-time sign language gestures into text and speech.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Contact Section === -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <p>📧 Email: <a href="mailto:rahul@example.com" style="color:#00bcd4;">rdkpryj@gmail.com</a></p>
+      <p>📞 Phone: +91-8004524799</p>
+      <p>🌐 LinkedIn: <a href="#" style="color:#00bcd4;">linkedin.com/in/rahuldevkumar</a></p>
+      <p>💻 GitHub: <a href="#" style="color:#00bcd4;">github.com/rahuldevkumar</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Rahul Dev Kumar 
+  </footer>
+
+  <script>
+    // small animation on scroll or future interactivity
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
